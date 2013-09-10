@@ -42,15 +42,15 @@ namespace LpmsB.Bluetooth
         {
             get
             {
-                return (AddressFamily)32; // AF_BTH
+                return (AddressFamily)BluetoothInterop.AF_BTH;
             }
         }
 
         public ProtocolType ProtocolType
         {
             get 
-            {
-                return (ProtocolType)3; // BTHPROTO_RFCOMM
+            { 
+                return (ProtocolType)BluetoothInterop.BTHPROTO_RFCOMM;
             }
         }
 

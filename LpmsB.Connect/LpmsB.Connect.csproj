@@ -103,6 +103,21 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bluetooth\BluetoothDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bluetooth\BluetoothInterop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bluetooth\BluetoothManufacturer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bluetooth\BluetoothRadio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bluetooth\SystemTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="LpmsBluetoothDevice.cs" />
     <Compile Include="DeviceMode.cs" />
     <Compile Include="FilterMode.cs" />

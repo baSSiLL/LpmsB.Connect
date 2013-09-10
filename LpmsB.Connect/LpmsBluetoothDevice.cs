@@ -10,6 +10,35 @@ namespace LpmsB
 {
     public class LpmsBluetoothDevice
     {
+        /// <summary>
+        /// Finds all LPMS-B sensors visible to Bluetooth adapters of this computer.
+        /// </summary>
+        /// <param name="deviceSearchTimeout">
+        /// Timeout for searching available devices for a single Bluetooth adapter.
+        /// Recommended values aree 5 to 10 seconds.
+        /// </param>
+        /// <remarks>
+        /// Method execution may take a significant time due to Bluetooth discovery operations.
+        /// </remarks>
+        /// <returns>Addresses of the sensors.</returns>
+        public static BluetoothAddress[] Enumerate(TimeSpan deviceSearchTimeout)
+        {
+            var radios = BluetoothRadio.FindAll();
+
+            var result = radios.SelectMany(radio => radio.FindDevices(deviceSearchTimeout)).
+                Where(device => device.Name.StartsWith("LPMS")).
+                Select(device => device.Address).
+                ToArray();
+
+            foreach (var radio in radios)
+            {
+                radio.Dispose();
+            }
+
+            return result;
+        }
+
+
         private Socket socket;
         private volatile SocketException socketConnectException;
         private Transmitter transmitter;
