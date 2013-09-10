@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LpmsB.Device
+﻿namespace LpmsB
 {
-    internal enum DeviceMode
+    public enum DeviceMode
     {
         Unknown = -1,
         Command = Protocol.Command.GotoCommandMode,

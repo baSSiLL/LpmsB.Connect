@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace LpmsB.Device
+namespace LpmsB
 {
     [Flags]
-    internal enum OutputFields : int
+    public enum OutputFields : int
     {
         Pressure = 1 << 9,
         Magnetometer = 1 << 10,

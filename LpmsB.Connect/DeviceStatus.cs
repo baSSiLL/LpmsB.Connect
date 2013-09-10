@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace LpmsB.Device
+namespace LpmsB
 {
     [Flags]
-    internal enum DeviceStatus
+    public enum DeviceStatus
     {
         CommandModeEnabled = 1 << 0,
         StreamModeEnabled = 1 << 1,

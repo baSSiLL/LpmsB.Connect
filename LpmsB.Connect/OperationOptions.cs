@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace LpmsB.Device
+namespace LpmsB
 {
     [Flags]
-    internal enum OperationOptions
+    public enum OperationOptions
     {
         DynamicMagnetometerCorrection = 1 << 20,
         GyroscopeThreshold = 1 << 23,

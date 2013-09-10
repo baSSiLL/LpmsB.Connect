@@ -1,6 +1,6 @@
-﻿namespace LpmsB.Device
+﻿namespace LpmsB
 {
-    internal enum FilterMode
+    public enum FilterMode
     {
         Gyroscope = 0,
         GyroscopeAccelerometer = 1,

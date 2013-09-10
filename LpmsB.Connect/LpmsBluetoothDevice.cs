@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
+using System.Linq;
 using System.Net.Sockets;
+using LpmsB.Bluetooth;
 using LpmsB.Protocol;
 using LpmsB.Utils;
 
-namespace LpmsB.Device
+namespace LpmsB
 {
-    internal class LpmsBluetoothDevice
+    public class LpmsBluetoothDevice
     {
         private Socket socket;
         private volatile SocketException socketConnectException;

@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Diagnostics.Contracts;
+using System.Linq;
 using System.Runtime.InteropServices;
 
-namespace LpmsB.Utils
+namespace LpmsB.Bluetooth
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct BluetoothAddress : IEquatable<BluetoothAddress>

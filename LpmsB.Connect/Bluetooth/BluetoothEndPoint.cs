@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
-using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using System.Diagnostics.Contracts;
-using System.Runtime.InteropServices;
 
-namespace LpmsB.Utils
+namespace LpmsB.Bluetooth
 {
-    public class BluetoothEndPoint : EndPoint
+    internal class BluetoothEndPoint : EndPoint
     {
         public BluetoothEndPoint(BluetoothAddress address, int port)
         {
@@ -52,7 +49,7 @@ namespace LpmsB.Utils
         public ProtocolType ProtocolType
         {
             get 
-            { 
+            {
                 return (ProtocolType)3; // BTHPROTO_RFCOMM
             }
         }

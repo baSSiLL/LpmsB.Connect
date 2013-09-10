@@ -103,22 +103,22 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Device\LpmsBluetoothDevice.cs" />
-    <Compile Include="Device\DeviceMode.cs" />
-    <Compile Include="Device\FilterMode.cs" />
-    <Compile Include="Device\MagnetometerCorrection.cs" />
-    <Compile Include="Device\OperationOptions.cs" />
-    <Compile Include="Device\OutputFields.cs" />
-    <Compile Include="Device\DeviceStatus.cs" />
+    <Compile Include="LpmsBluetoothDevice.cs" />
+    <Compile Include="DeviceMode.cs" />
+    <Compile Include="FilterMode.cs" />
+    <Compile Include="MagnetometerCorrection.cs" />
+    <Compile Include="OperationOptions.cs" />
+    <Compile Include="OutputFields.cs" />
+    <Compile Include="DeviceStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protocol\Command.cs" />
     <Compile Include="Protocol\Packet.cs" />
     <Compile Include="Protocol\Transmitter.cs" />
-    <Compile Include="Utils\BluetoothAddress.cs" />
-    <Compile Include="Utils\BluetoothEndPoint.cs" />
+    <Compile Include="Bluetooth\BluetoothAddress.cs" />
+    <Compile Include="Bluetooth\BluetoothEndPoint.cs" />
     <Compile Include="Utils\EnumExtensions.cs" />
-    <Compile Include="Utils\Quaternion.cs" />
-    <Compile Include="Utils\Vector3d.cs" />
+    <Compile Include="Quaternion.cs" />
+    <Compile Include="Vector3d.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

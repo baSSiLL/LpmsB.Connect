@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LpmsB.Utils
+namespace LpmsB
 {
     public struct Quaternion : IEquatable<Quaternion>, IEnumerable<double>
     {
