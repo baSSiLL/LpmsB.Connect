@@ -145,9 +145,9 @@ namespace LpmsB
             return len > double.Epsilon ? this / len : Zero;
         }
 
-        public static Quaternion operator /(Quaternion q, double devider)
+        public static Quaternion operator /(Quaternion q, double divider)
         {
-            return new Quaternion(q.W / devider, q.X / devider, q.Y / devider, q.Z / devider);
+            return new Quaternion(q.W / divider, q.X / divider, q.Y / divider, q.Z / divider);
         }
 
         public static Quaternion operator *(Quaternion q, double mul)

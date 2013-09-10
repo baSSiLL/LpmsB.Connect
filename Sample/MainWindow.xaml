@@ -1,0 +1,27 @@
+﻿<Window x:Class="Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LpmsB.Connect Sample" Height="350" Width="525"
+        DataContext="{x:Static Application.Current}">
+    <DockPanel>
+        <TextBlock FontSize="18" Margin="10" TextWrapping="Wrap"
+                   DockPanel.Dock="Top">
+            The LED lights green when corresponding sensor is rotating.
+        </TextBlock>
+        <ItemsControl ItemsSource="{Binding Sensors}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Ellipse Stroke="Black" StrokeThickness="3"
+                             Fill="{Binding Brush}"
+                             Width="30" Height="30"
+                             Margin="10"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DockPanel>
+</Window>
