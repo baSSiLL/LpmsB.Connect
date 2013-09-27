@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net.Sockets;
 using LpmsB.Bluetooth;
 using LpmsB.Protocol;
-using LpmsB.Utils;
 
 namespace LpmsB
 {
@@ -403,49 +402,49 @@ namespace LpmsB
             test.WriteSingle(0f);
             rawDataOffset = test.DataOffset;
 
-            if (OutputFields.IsSet(OutputFields.Gyroscope))
+            if (OutputFields.HasFlag(OutputFields.Gyroscope))
             {
                 test.WriteVector3d(Vector3d.Zero);
             }
-            if (OutputFields.IsSet(OutputFields.Accelerometer))
+            if (OutputFields.HasFlag(OutputFields.Accelerometer))
             {
                 test.WriteVector3d(Vector3d.Zero);
             }
-            if (OutputFields.IsSet(OutputFields.Magnetometer))
+            if (OutputFields.HasFlag(OutputFields.Magnetometer))
             {
                 test.WriteVector3d(Vector3d.Zero);
             }
-            if (OutputFields.IsSet(OutputFields.AngularVelocity))
+            if (OutputFields.HasFlag(OutputFields.AngularVelocity))
             {
                 test.WriteVector3d(Vector3d.Zero);
             }
             quaternionOffset = -1;
-            if (OutputFields.IsSet(OutputFields.Quaternion))
+            if (OutputFields.HasFlag(OutputFields.Quaternion))
             {
                 quaternionOffset = test.DataOffset;
                 test.WriteQuaternion(Quaternion.Zero);
             }
-            if (OutputFields.IsSet(OutputFields.EulerAngles))
+            if (OutputFields.HasFlag(OutputFields.EulerAngles))
             {
                 test.WriteVector3d(Vector3d.Zero);
             }
-            if (OutputFields.IsSet(OutputFields.LinearAcceleration))
+            if (OutputFields.HasFlag(OutputFields.LinearAcceleration))
             {
                 test.WriteVector3d(Vector3d.Zero);
             }
-            if (OutputFields.IsSet(OutputFields.Pressure))
+            if (OutputFields.HasFlag(OutputFields.Pressure))
             {
                 test.ReadSingle();
             }
-            if (OutputFields.IsSet(OutputFields.Altitude))
+            if (OutputFields.HasFlag(OutputFields.Altitude))
             {
                 test.ReadSingle();
             }
-            if (OutputFields.IsSet(OutputFields.Temperature))
+            if (OutputFields.HasFlag(OutputFields.Temperature))
             {
                 test.ReadSingle();
             }
-            if (OutputFields.IsSet(OutputFields.HeaveMotion))
+            if (OutputFields.HasFlag(OutputFields.HeaveMotion))
             {
                 test.ReadSingle();
             }

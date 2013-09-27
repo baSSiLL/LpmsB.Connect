@@ -2,7 +2,6 @@
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
-using LpmsB.Utils;
 
 namespace LpmsB.Protocol
 {

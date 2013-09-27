@@ -132,7 +132,6 @@
     <Compile Include="Protocol\Transmitter.cs" />
     <Compile Include="Bluetooth\BluetoothAddress.cs" />
     <Compile Include="Bluetooth\BluetoothEndPoint.cs" />
-    <Compile Include="Utils\EnumExtensions.cs" />
     <Compile Include="Quaternion.cs" />
     <Compile Include="Vector3d.cs" />
   </ItemGroup>
